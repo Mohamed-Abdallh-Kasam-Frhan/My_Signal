@@ -27,20 +27,13 @@ class SubCategoryCard extends StatelessWidget {
         return Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
+              height: 100,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               margin: const EdgeInsets.symmetric(vertical: 2),
               decoration: BoxDecoration(
                 color: AppColors.surface,
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: InkWell(
-                  onTap: onTap,
-                  borderRadius: BorderRadius.circular(0),
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    height: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
                     child: InkWell(
                       onTap: onTap,
                       borderRadius: BorderRadius.circular(12),
@@ -132,9 +125,9 @@ class SubCategoryCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )),
-            ));
-      },
-    );
+                  ),
+                  );
+                  }
+        );
   }
 }

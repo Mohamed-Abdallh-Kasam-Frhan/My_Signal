@@ -47,43 +47,37 @@ class SignalScreen extends StatelessWidget {
               const SizedBox(width: 10),
             ],
           ),
-          body: Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
-                  padding: const EdgeInsets.only(
-                    top: 10,
-                    bottom: 20,
-                  ),
-                  itemCount: filteredSignals.length,
-                  itemBuilder: (context, index) {
-                    final item = filteredSignals[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 2,
-                      ),
-                      child: SubCategoryCard(
-                        id: item.id,
-                        title: item.title,
-                        urlImage: item.urlImageMean,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => DetailsSignalScreen(
-                                signal: item,
-                                category: category,
-                              ),
-                            ),
-                          );
-                        },
+          body: ListView.builder(
+            padding: const EdgeInsets.only(
+              top: 10,
+              bottom: 20,
+            ),
+            itemCount: filteredSignals.length,
+            itemBuilder: (context, index) {
+              final item = filteredSignals[index];
+              return Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 2,
+                ),
+                child: SubCategoryCard(
+                  id: item.id,
+                  title: item.title,
+                  urlImage: item.urlImageMean,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => DetailsSignalScreen(
+                          signal: item,
+                          category: category,
+                        ),
                       ),
                     );
                   },
                 ),
-              ),
-            ],
+              );
+            },
           ),
         );
       },

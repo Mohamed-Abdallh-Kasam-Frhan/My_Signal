@@ -11,28 +11,27 @@ class SupabaseHelper {
 
   final SupabaseClient _client = Supabase.instance.client;
 
-  // --- Category Operations ---
+  
 
   Future<List<Category>> getCategories() async {
-    // 1. Fetch categories
+    
     final List<dynamic> catData = await _client
         .from('categories')
         .select()
         .order('id', ascending: true);
 
-    // 2. Fetch signals
+    
     final List<dynamic> sigData = await _client
         .from('signals')
         .select()
         .order('id', ascending: true);
 
-    // If categories are empty in Supabase, let's automatically seed them
     if (catData.isEmpty) {
       await _seedDatabase();
-      return getCategories(); // Recall after seeding
+      return getCategories(); 
     }
 
-    // Map signals by category id
+    
     final Map<int, List<Signal>> signalsByCategory = {};
     for (final sigMap in sigData) {
       final int catId = sigMap['category_id'] as int;
@@ -60,7 +59,7 @@ class SupabaseHelper {
   }
 
   Future<void> _seedDatabase() async {
-    // Seed default categories and signals
+    
     for (final category in mainCategories) {
       final insertedCat = await _client.from('categories').insert({
         'id': category.id,
@@ -100,7 +99,7 @@ class SupabaseHelper {
     required String urlImageMean,
     required String description,
   }) async {
-    // 1. Insert signal
+    
     await _client.from('signals').insert({
       'category_id': categoryId,
       'title': title,
@@ -109,7 +108,7 @@ class SupabaseHelper {
       'description': description,
     });
 
-    // 2. Fetch current count and update count
+    
     final List<dynamic> catData = await _client
         .from('categories')
         .select('number_of')
@@ -124,7 +123,7 @@ class SupabaseHelper {
     }
   }
 
-  // --- Favorites Operations ---
+  
 
   Future<Set<int>> getFavorites() async {
     final List<dynamic> favData = await _client.from('favorites').select('id');

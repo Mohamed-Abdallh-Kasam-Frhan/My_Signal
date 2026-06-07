@@ -42,7 +42,6 @@ class AppProvider extends ChangeNotifier {
         await _supabaseHelper.addFavorite(id);
       }
     } catch (e) {
-      // Offline fallback
       if (_favorites.contains(id)) {
         _favorites.remove(id);
       } else {
@@ -56,7 +55,6 @@ class AppProvider extends ChangeNotifier {
     try {
       await _supabaseHelper.insertCategory(title, icon.codePoint, color.toARGB32());
     } catch (e) {
-      // Simulated local insertion for offline testing
       final newId = _categories.length + 1;
       _categories.add(Category(
         id: newId,
@@ -86,7 +84,6 @@ class AppProvider extends ChangeNotifier {
         description: description,
       );
     } catch (e) {
-      // Simulated local insertion for offline testing
       final index = _categories.indexWhere((c) => c.id == categoryId);
       if (index != -1) {
         final category = _categories[index];

@@ -8,7 +8,7 @@ final List<Category> mainCategories = [
     title: "أفعال",
     numberOf: 50,
     icon: Icons.directions_run,
-    color: const Color(0xFFB0E0E6),
+    color: Color(0xFFB0E0E6),
     signals: [
       Signal(id :1, title: "أكل", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "أكل الطعام" ),
       Signal(id: 2, title: "شرب", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "شرب الماء" ),
@@ -25,7 +25,7 @@ final List<Category> mainCategories = [
     title: "طعام",
     numberOf: 45,
     icon: Icons.fastfood,
-    color: const Color(0xFFFFE8A3),
+    color: Color(0xFFFFE8A3),
     signals: [
       
       Signal(id: 201, title: "تفاح", urlImage: "images/signal_Images/signal_apple.jpg", urlImageMean: "images/signal_Images/apple.png", description: "التفاح حالي بس غالي ياغالي" ),
@@ -40,7 +40,7 @@ final List<Category> mainCategories = [
     title: "عائلة",
     numberOf: 30,
     icon: Icons.family_restroom,
-    color: const Color(0xFFB7E4C7),
+    color:  Color(0xFFB7E4C7),
     signals: [
       Signal(id: 301, title: "أب", urlImage: "images/logoApp.png",urlImageMean: "images/logoApp.png", description: "الأب في العائلة" ),
       Signal(id: 302, title: "أم", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "الأم في العائلة" ),
@@ -87,7 +87,7 @@ final List<Category> mainCategories = [
     title: "أرقام",
     numberOf: 15,
     icon: Icons.format_list_numbered,
-    color:const Color(0xFFD8B4FE),
+    color: Color(0xFFD8B4FE),
     signals: [
       Signal(id: 601, title: "واحد", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "الواحد في الأرقام" ),
       Signal(id: 602, title: "اثنان", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "الاثنان في الأرقام" ),
@@ -103,7 +103,7 @@ final List<Category> mainCategories = [
     title: "حيوانات",
     numberOf: 35,
     icon: Icons.pets,
-    color: const Color(0xFFD7C4A5),
+    color:  Color(0xFFD7C4A5),
     signals: [
       Signal(id: 701, title: "قطة", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "القطة في الحيوانات" ),
       Signal(id: 702, title: "كلب", urlImage: "images/logoApp.png", urlImageMean: "images/logoApp.png", description: "الكلب في الحيوانات" ),

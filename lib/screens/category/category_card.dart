@@ -12,15 +12,11 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.surface,
-      borderRadius: BorderRadius.circular(16),
-      elevation: 6,
-      shadowColor: Colors.black.withValues(alpha: 0.2),
-      child: Container(
+    return Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
+          color: AppColors.surface,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +45,6 @@ class CategoryCard extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

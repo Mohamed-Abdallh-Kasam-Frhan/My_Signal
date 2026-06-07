@@ -43,7 +43,6 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
     Icons.shopping_cart,
   ];
 
-  // Colors to choose from
   final List<Color> predefinedColors = [
     const Color(0xFFB0E0E6),
     const Color(0xFFFFE8A3),
