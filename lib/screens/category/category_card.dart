@@ -12,28 +12,21 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.surface,
-      borderRadius: BorderRadius.circular(16),
-      elevation: 6,
-      shadowColor: Colors.black.withOpacity(0.2),
-      child: Container(
+    return Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
+          color: AppColors.surface,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           
             Icon(
               element.icon,
               size: 80,
               color: element.color,
             ),
-
             const SizedBox(height: 12),
-
             Text(
               element.title,
               style: Theme.of(context)
@@ -42,9 +35,7 @@ class CategoryCard extends StatelessWidget {
                   ?.copyWith(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-
             const SizedBox(height: 4),
-
             Text(
               '${element.numberOf} عنصر',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -54,7 +45,6 @@ class CategoryCard extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

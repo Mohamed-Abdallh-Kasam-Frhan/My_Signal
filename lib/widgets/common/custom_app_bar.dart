@@ -20,7 +20,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final Color bg = backgroundColor ?? AppColors.primary;
-    // If a titleColor is provided use it for icons too; otherwise pick contrasting color
     final Color leadingIconColor = titleColor ??
         (bg.computeLuminance() > 0.5 ? Colors.black : Colors.white);
 

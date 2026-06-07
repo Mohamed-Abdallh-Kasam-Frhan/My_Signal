@@ -24,7 +24,7 @@ class AppTheme {
       titleTextStyle: AppFonts.textTheme.titleLarge
           ?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colors.white,
       selectedItemColor: AppColors.primary,
       unselectedItemColor: Colors.grey,
